@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 public class MeshDeformer : MonoBehaviour
 {
-    public bool useDamage = true;                                               // Use Damage.
+
     private struct originalMeshVerts { public Vector3[] meshVerts; }    // Struct for Original Mesh Verticies positions.
     private originalMeshVerts[] originalMeshData;                           // Array for struct above.
 
     public MeshFilter[] deformableMeshFilters;                              // Deformable Meshes.
     [SerializeField] private MeshCollider meshCollider;
-    public LayerMask damageFilter = -1;                                     // LayerMask filter for not taking any damage.
+
     public float randomizeVertices = 1f;                                            // Randomize Verticies on Collisions for more complex deforms.
     public float damageRadius = .5f;                                                // Verticies in this radius will be effected on collisions.
    
     public float maximumDamage = .5f;               // Maximum Vert Distance For Limiting Damage. 0 Value Will Disable The Limit.
-    private float minimumCollisionForce = 5f;       // Minimum collision force.
+    [SerializeField] private float minimumCollisionForce = 5f;       // Minimum collision force.
     public float deformMultiplier = 1f;             // Damage multiplier.
 
     void Start() 
@@ -171,3 +171,4 @@ public class MeshDeformer : MonoBehaviour
         
     }
 }
+
