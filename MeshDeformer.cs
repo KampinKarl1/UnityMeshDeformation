@@ -61,6 +61,9 @@ public class MeshDeformer : MonoBehaviour
 
         for (int i = 0; i < deformableMeshFilters.Length; i++)
             DeformMesh(i, originalMeshData[i].meshVerts, collision, angleOfImpact, localImpactVector);
+
+            Destroy(meshCollider);
+        meshCollider = gameObject.AddComponent<MeshCollider>();
     }
 
     private void DeformMesh(int meshIndex, Vector3[] originalMesh, Collision collision, float cos, Vector3 localImpactVector)
@@ -100,7 +103,7 @@ public class MeshDeformer : MonoBehaviour
         mesh.RecalculateNormals();
         mesh.RecalculateBounds();
 
-        Destroy(meshCollider);
-        meshCollider = gameObject.AddComponent<MeshCollider>();
+        
     }
 }
+
