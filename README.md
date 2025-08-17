@@ -7,6 +7,6 @@ I didn't develop the original mesh deformation object but have adapted it to sui
   
   *Right now there are fields you have to fill with the mesh filters to be deformed and the mesh collider that's used for the collision detection*
   
--Add mesh filters in the deformable mesh filters array field
+- Add mesh filters in the deformable mesh filters array field
 
--Add mesh collider that detects the collision (and is swapped for a new mesh collider on applicable collisions so as to avoid bumping into invisible colliders)
+- Add mesh collider that detects the collision (and is swapped for a new mesh collider on applicable collisions so as to avoid bumping into invisible colliders)
