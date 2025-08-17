@@ -11,4 +11,6 @@ I didn't develop the original mesh deformation object but have adapted it to sui
 
 - Add mesh collider that detects the collision (and is swapped for a new mesh collider on applicable collisions so as to avoid bumping into invisible colliders)
 
-Next is creating a thread pool into which deform jobs can be sent and performing changes over several frames instead of in the same stack frame.
+
+## Next ##
+Next is creating a thread pool into which deform jobs can be sent and performing changes over several frames instead of in the same stack frame as when OnCollision is called.
